@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap + Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: url('/static/image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #1a531e, #296f2d);
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .feedback-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 85vh;
+      padding: 40px 20px;
+    }
+
+    .feedback-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .feedback-box h2 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #dcedc8;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-submit {
+      background-color: #81c784;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn-submit:hover {
+      background-color: #66bb6a;
+    }
+
+    .thank-you {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #c5e1a5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="/"><i class="fas fa-seedling me-2"></i>PlantAI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPlantAI">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarPlantAI">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/predict">Predict</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/feedback">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Feedback Section -->
+  <div class="feedback-section">
+    <div class="feedback-box">
+      <h2>We Value Your Feedback</h2>
+      <form method="POST">
+      
+        <div class="mb-3">
+          <label for="experience" class="form-label">Your Feedback</label>
+          <textarea name="experience" rows="4" class="form-control" required placeholder="Provide your Feedback....."></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit w-100">Submit Feedback</button>
+      </form>
+
+      {% if message %}
+      <div class="thank-you">{{ message }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+
+   <div class="text-center py-3" style="background: linear-gradient(to bottom, #296f2d, #1a531e);">
+    <small style="color: #ffffff;">&copy; 2025 PlantAI. All rights reserved.</small>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Dataset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('/static/image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #1a531e, #296f2d);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 85vh;
+            padding: 40px 20px;
+        }
+
+        .about-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-box h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #dcedc8;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .about-box p,
+        .about-box ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f5f5f5;
+        }
+
+        .about-box ul {
+            list-style: disc;
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #c5e1a5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
+        style="background:linear-gradient(to bottom, #296f2d, #1a531e); box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="/">
+                <i class="fas fa-seedling me-2"></i>PlantAI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPlantAI"
+                aria-controls="navbarPlantAI" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarPlantAI">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/predict">Predict</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="/feedback">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-box">
+            <h2>About the Dataset</h2>
+            <p>This dataset is recreated using offline augmentation from the original dataset. The original dataset can
+                be found on this github repo. This dataset consists of about 87K rgb images of healthy and diseased crop
+                leaves which is categorized into 38 different classes. The total dataset is divided into 80/20 ratio of
+                training and validation set preserving the directory structure.</p>
+            <p>The images are split into training, validation, and test sets:</p>
+            <ul>
+                <li><span class="highlight">Train:</span> 70,295 images</li>
+                <li><span class="highlight">Validation:</span> 17,572 images</li>
+                <li><span class="highlight">Test:</span> 33 images</li>
+            </ul>
+
+            <p>This dataset helps train deep learning models for plant disease classification. The original version can
+                be
+                found on GitHub, and this augmented set follows the same directory structure with an 80/20 split.</p>
+        </div>
+    </div>
+     <div class="text-center py-3" style="background: linear-gradient(to bottom, #296f2d, #1a531e);">
+    <small style="color: #ffffff;">&copy; 2025 PlantAI. All rights reserved.</small>
+  </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
